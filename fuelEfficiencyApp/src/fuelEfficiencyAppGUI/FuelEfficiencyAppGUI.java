@@ -8,10 +8,21 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+/**
+ * 燃費管理アプリのGUI版
+ */
 public class FuelEfficiencyAppGUI {
+
+  final static String TITLE = "燃費管理アプリ";
+  final static String DISTANCE_LABEL = "距離 (km):";
+  final static String FUEL_LABEL_L = "給油量 (L):";
+  final static String CALCULATE = "計算";
+  final static String CLEAR = "クリア";
+  final static String RESULT = "燃費: -- km/L";
+
   public static void main(String[] args) {
     // フレーム作成
-    JFrame frame = new JFrame("燃費管理アプリ");
+    JFrame frame = new JFrame(TITLE);
     frame.setSize(300, 250);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -28,7 +39,7 @@ public class FuelEfficiencyAppGUI {
     panel.setLayout(null);
 
     // 距離入力
-    JLabel distanceLabel = new JLabel("距離 (km):");
+    JLabel distanceLabel = new JLabel(DISTANCE_LABEL);
     distanceLabel.setBounds(10, 20, 80, 25);
     panel.add(distanceLabel);
 
@@ -37,7 +48,7 @@ public class FuelEfficiencyAppGUI {
     panel.add(distanceText);
 
     // 給油量入力
-    JLabel fuelLabel = new JLabel("給油量 (L):");
+    JLabel fuelLabel = new JLabel(FUEL_LABEL_L);
     fuelLabel.setBounds(10, 50, 80, 25);
     panel.add(fuelLabel);
 
@@ -46,17 +57,17 @@ public class FuelEfficiencyAppGUI {
     panel.add(fuelText);
 
     // 計算ボタン
-    JButton calculateButton = new JButton("計算");
+    JButton calculateButton = new JButton(CALCULATE);
     calculateButton.setBounds(10, 80, 80, 25);
     panel.add(calculateButton);
 
     // クリアボタン
-    JButton clearButton = new JButton("クリア");
+    JButton clearButton = new JButton(CLEAR);
     clearButton.setBounds(100, 80, 80, 25);
     panel.add(clearButton);
 
     // 結果表示
-    JLabel resultLabel = new JLabel("燃費: -- km/L");
+    JLabel resultLabel = new JLabel(RESULT);
     resultLabel.setBounds(10, 110, 200, 25);
     panel.add(resultLabel);
 
@@ -86,7 +97,7 @@ public class FuelEfficiencyAppGUI {
         // 入力欄と結果ラベルをリセット
         distanceText.setText("");
         fuelText.setText("");
-        resultLabel.setText("燃費: -- km/L");
+        resultLabel.setText(RESULT);
       }
     });
   }
