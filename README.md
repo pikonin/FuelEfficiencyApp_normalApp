@@ -47,33 +47,7 @@
 
 #### ユーザーの操作フロー
 
-```plantuml
-@startuml
-actor ユーザー as User
-participant アプリ as App
-
-User -> App : アプリを起動
-activate App
-
-User -> App : 運転距離(km)と給油量(L)を入力
-App -> App : 入力内容をチェック
-alt 入力が数値でない場合
-    App --> User : エラー「数値を入力してください」
-else 入力が有効
-    User -> App : 「計算」ボタンを押す
-    App -> App : 給油量をチェック
-    alt 給油量が0の場合
-        App --> User : エラー「給油量が0では計算できません」
-    else 有効な給油量
-        App -> App : 燃費を計算 (運転距離 ÷ 給油量)
-        App --> User : 計算結果 (燃費 km/L) を表示
-    end
-end
-
-deactivate App
-@enduml
-
-```
+![image](https://github.com/user-attachments/assets/6e1bd8e1-699e-4353-bdaa-057600a97dd6)
 
 ### エラーハンドリング
 
@@ -99,14 +73,5 @@ deactivate App
 
 ### スケジュール
 
-```plantuml
-@startgantt
-Project starts 2025-01-09
+![image](https://github.com/user-attachments/assets/3356e5c9-2cdb-43e3-879c-f6f4def0df80)
 
-[機能仕様書作成] starts 2025-01-11 and ends 2025-01-11
-[コンソール版実装] starts 2025-01-11 and ends 2025-01-12
-[GUI版実装] starts 2025-01-13 and ends 2025-01-15
-[テスト] starts 2025-01-16 and ends 2025-01-16
-
-@endgantt
-```
