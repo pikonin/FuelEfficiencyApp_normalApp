@@ -59,19 +59,33 @@
 - 「計算」ボタン
 - 出力
   - 結果ラベル(燃費の計算結果を表示)
+- 履歴ボタン
+  - 
 
 ## 非機能要件
 
 ### 開発環境
 
-- 言語:Java 　
-  openjdk version 21.0.4" 2024-07-16 LTS
-  OpenJDK Runtime Environment Temurin-21.0.4+7
+|項目|内容|
+|-|-|
+|OS|Android 12+|
+|API Level|31+|
+|UI Framework|Jetpack Compose|
+|SDK|Android Studio Dolphin+|
 
-- 開発ツール：Eclipse
-- ライブラリ:必要に応じて追加していく
+### キーフィーチャー機能
 
-### スケジュール
+#### ダッシュボードビュー上の簡易なグラフの表示
+ユーザーが入力したデータをグラフ形式で表示  
+Jetpack Composeによるキャンバス使用  
+バーのカラーやレイベル表示のカスタマイズ可能
 
-![image](https://github.com/user-attachments/assets/3356e5c9-2cdb-43e3-879c-f6f4def0df80)
+##### フォントやテーマ
+Material Design 3に基づくスタイリング  
+ユーザーの要件に応じたパレットカラーの可變化  
+
+##### データ分析機能
+入力されたデータを年々、月次に分類、分析  
+Kotlinの標準処理ライブラリを使用### 今後に付け加えたい機能
+
 
